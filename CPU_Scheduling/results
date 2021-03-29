@@ -1,0 +1,72 @@
+i/p ->
+
+p0 0 13
+p1 2 12
+p2 4 2
+p3 6 1
+
+
+
+>>>>>	First Come First Served	<<<<<
+
+[0-13] p0 running
+[13-25] p1 running
+[25-27] p2 running
+[27-28] p3 running
+
+Proc_Name	Turnaround_Times	Wait_times
+  p0			 13		   0
+  p1			 23		   11
+  p2			 23		   21
+  p3			 22		   21
+
+Average Turnaround Time: 20.25
+Average Wait Time: 13.25
+
+
+>>>>>	Round Robin Scheduling	<<<<< with quantum = 2
+
+[0-2] p0 running
+[2-4] p1 running
+[4-6] p2 running
+[6-8] p3 running
+[7-9] p0 running
+[9-11] p1 running
+[11-13] p0 running
+[13-15] p1 running
+[15-17] p0 running
+[17-19] p1 running
+[19-21] p0 running
+[21-23] p1 running
+[23-25] p0 running
+[25-27] p1 running
+[27-28] p0 running
+
+Proc_Name	Turnaround_Times	Wait_times
+  p0			 28		   15
+  p1			 25		   13
+  p2			 2		   0
+  p3			 2		   0
+
+Average Turnaround Time: 14.25
+Average Wait Time: 7.00
+
+>>>>>	Shortest Remainning Burst First	<<<<<
+
+[0-4] p0 running
+[4-6] p2 running
+[6-7] p3 running
+[7-19] p1 running
+[19-28] p0 running
+
+Proc_Name	Turnaround_Times	Wait_times
+  p0			 28		   15
+  p1			 17		   7
+  p2			 2		   4
+  p3			 1		   6
+
+Average Turnaround Time: 12.00
+Average Wait Time: 8.00
+
+
+
